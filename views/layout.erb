@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+  </head>
+  <body>
+    <%= erb(:"partials/navigation", :layout => false) %>
+<!-- it first starts off in the post controller looks at the erb which is the view and heads to layout and from layout it uses another erb and goes to navigation and injects the navigation and then once it hits yeild it goes to back into the post controller and then runs index and shows and the runs the two files-->
+    <%= yield %>
+  </body>
+</html>
